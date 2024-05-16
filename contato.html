@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TechPlay</title>
+    <title>Contato</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon shortcut" href="TachPlayINVETIDO.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,11 +41,39 @@
     </header>
 
     <main>
-       
+
+        <section>
+
+            <h1 style="padding-top: 30px;">Entre em contato</h1>
+
+        </section>
+
+        <section class="form">
+            <form action="https://api.staticforms.xyz/submit" method="post">
+
+                <input type="hidden" name="redirectTo" vaLue="http://127.0.0.1:5500/obrigado.html">
+                <input type="hidden" name="accessKey" vaLue="df8f0503-63c6-41fd-a53f-595c9a3b3808"><!--chave para enviar o email-->
+
+                <label>Nome</label>
+                <input type="text" name="name" placeholder="Digite seu Nome" autocomplete="off">
+
+                <label>Email</label>
+                <input type="email" name="email" placeholder="Digite seu Email" autocomplete="off">
+
+                <label>Mensagem</label>
+                <textarea name="Digite sua Mensagem"></textarea>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </section>
+
     </main>
 
 </body>
 <footer>
+
+    <p>Desenvolvido Por : <a href="https://github.com/DemonSinox" target="_blank">Lucas Henrique Vieira</a></p>
 
 </footer>
 

@@ -32,20 +32,28 @@ header {
 main {
   padding-top: 3%;
   text-align: center; }
-  main .apresentação {
-    width: 100%;
-    height: 80%; }
-    main .apresentação img {
-      border-radius: 1%; }
-    main .apresentação h1 {
-      font-size: 30px;
-      text-transform: uppercase;
-      font-weight: bold; }
+  main a {
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+    color: #d3d3d3;
+    margin: 1%;
+    padding: 2%;
+    border-radius: 5px; }
+    main a:hover {
+      border: solid 1px white;
+      font-weight: bold;
+      color: white;
+      transition: 0.7s; }
+
+.apresentação img {
+  width: 100%;
+  height: 50%; }
 
 .box-jogos {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: 5%;
+  gap: 5% 3%;
   margin: auto;
   width: 85%; }
 
@@ -54,24 +62,54 @@ main {
   text-align: center;
   background-color: #111111;
   padding-bottom: 15%; }
+  .box:hover {
+    transition: 0.7s;
+    background: #ffffff15;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    box-shadow: rgba(255, 255, 255, 0.35) 0px -50px 36px -28px inset; }
   .box img {
     border-radius: 1%;
     width: 100%; }
   .box h2 {
     padding-bottom: 10%; }
-  .box a {
-    text-transform: uppercase;
-    text-decoration: none;
-    list-style: none;
-    color: #d3d3d3;
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.397);
+  margin: 10% 10%; }
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 60%; }
+  form label {
+    padding-bottom: 2%;
+    padding-top: 5%; }
+  form input,
+  form textarea {
+    padding: 1%;
+    background-color: #111111;
+    border-radius: 10px;
+    border: 1px solid; }
+  form textarea {
+    padding: 10% 0%;
+    margin-bottom: 3%; }
+  form button {
     margin: 1%;
     padding: 2%;
-    border-radius: 5%; }
-    .box a:hover {
-      border: solid 1px white;
-      font-weight: bold;
-      color: white;
-      transition: all 0.7s; }
+    border-radius: 10px;
+    border: solid 1px #141414;
+    background: none;
+    color: #d3d3d3; }
+    form button:hover {
+      transition: 0.7s;
+      border: solid 1px white; }
 
 h1 {
   font-size: 32px; }
