@@ -1,116 +1,175 @@
-$color1 : rgb(8, 0, 15);
-$color2 : rgb(14, 13, 13);
-$textColor : #d3d3d3;
-$linkColor : rgb(132, 0, 255);
+$color1 : rgb(24, 24, 29);
+$color2 : rgb(16, 17, 19);
+$textColor : #fff;
+$linkColor : rgb(0, 110, 255);
 
-* {
-    padding: 0;
-    margin: 0;
-}
-
-html {
-    
-    scroll-behavior: smooth;
-}
-
-.header {
-    .nav {
-        background: $color1;
-        height: 6em;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-
-        .nav-list {
-            list-style: none;
-            display: flex;
-
-            li {
-                letter-spacing: 0.2em;
-                margin: 1em;
-
-                a {
-                    font-weight: bold;
-                    text-decoration: none;
-                    color: $textColor;
-                    padding: 5px;
-
-                    &:hover {
-
-                        color: $linkColor;
-                        transition: 0.5s;
-                    }
-                }
-            }
-        }
-    }
-    
-}
-.logo {
-    padding: 5px;
-    font-size: 2.5em;
-    text-transform: uppercase;
-    letter-spacing: 0.2em;
-    text-decoration: none;
-    color: $textColor;
-    &:hover{
-        transition: ease 0.5s;
-        color: $linkColor
-    }
-}
-
-main {
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.navbar {
     width: 100%;
-}
-    a,
-    .button {
-        text-transform: uppercase;
-        text-decoration: none;
-        list-style: none;
-        color: $textColor;
-
-        &:hover {
-            transition: 0.7s;
-            background: rgba(132, 0, 255, 0.034);
-            border-radius: 5px;
-            color: $linkColor;
-            box-shadow: rgba(132, 0, 255, 0.35) 0px -50px 36px -28px inset;
-        }
+    top: 0;
+    z-index: 99;
+    position:fixed;
+    background: $color1 !important;
+    height: 5em;
+    & &-nav {
+        margin-left: 2vh;
     }
+}
+.play-button {
+    background-color: #0066cc; 
+    border: none; 
+    color: white; 
+    padding: 8px 2px 8px 8px; 
+    text-align: center; 
+    text-decoration: none; 
+    display: inline-block; 
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer; 
+    border-radius: 20px; 
+    &:hover{
+        transition: all 0.5s;
+        filter: brightness(2);
+    }
+}
 
-.box-jogos {
+.play-button i {
+    margin-right: 8px;
+}
+
+.navbar-brand {
+    margin-left: 1vh;
+    letter-spacing: 0.3em !important;
+    
+    &:hover {
+        color: $textColor !important;
+    }
+}
+.card {
+
+    color: $textColor !important;
+    background: $color2 !important;
+    margin: 1em;
+    border: none;
+
+    a img {
+        border-radius: 5px;
+        height: 18em !important;
+    }
+}
+
+.card-img-top {
+    filter: brightness(-0.5);
+    transition: filter 0.3s ease;
+}
+
+.card-img-top:hover {
+    filter: brightness(1.2);
+}
+section{
+    padding-bottom: 5%;
+}
+
+body {
+    padding-top: 5em;
+    color: $textColor !important;
+    background: $color2;
+    letter-spacing: 0.1em !important;
+    font-family: system-ui, -apple-system, Helvetica, arial, sans-serif !important;
+}
+
+h1 {
+    padding-top: 1em;
+    margin: 2em;
+    letter-spacing: 2px !important;
+    color: #ffffffc5;
+}
+
+.dropdown-item {
+    &:hover {
+        color: $textColor !important;
+        border-radius: 5px !important;
+        background: #ffffff2c !important;
+    }
+}
+
+.nav-item {
+    padding: -5px !important;
+    margin-left: 2vh;
+    border-radius: 10px;
+    transition: ease-in 0.1s;
+
+    &:hover {
+        background: #ffffff2c;
+        transition: ease-in 0.1s;
+    }
+}
+
+.conteiner {
+
+    background: $color1;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 90%;
+    justify-content: space-between;
+    width: 100%;
+
 }
 
-.box{
-    margin: 2%;
-    border-radius: 2%;
-    text-align: center;
-    background-color: $color1;
-    width: 28%;
-    height: 13%;
+
+.flex-game {
+    display: flex !important;
+    flex-wrap: wrap !important;
+}
+
+.row {
+    margin: 3em;
+    .jogar {
+        background-color: #0066cc;
+        color: white;
+        font-size: 1.2em;
+        padding: 15px;
+        border-radius: 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            transition: all 0.5s;
+            filter: brightness(1.2);
+        }
+
+    }
 
     img {
-        border-radius: 1%;
-        height: 18em;
-        width: 100%;
-
+        margin-bottom: 1em;
+        border-radius: 10px !important;
     }
+}
+.card-text{
+    justify-content: space-between;
+}
 
-    h2 {
-        padding: 1em 0 2em;
+a {
+    color: #ffffffbe !important;
+
+    &:hover {
+        transition: ease 0.5s;
+        color: $linkColor;
     }
+}
 
-    p {
-        padding-bottom: 2em;
+.button {
+    text-decoration: none;
+    list-style: none;
+    color: $textColor;
+    transition: 0.3s;
+    margin-bottom: 3em;
+
+    &:hover {
+        transition: 0.3s;
+        background: rgba(132, 0, 255, 0.034);
+        border-radius: 5px;
+        color: $linkColor;
+        box-shadow: rgba(0, 68, 255, 0.35) 0px -50px 36px -28px inset;
     }
 }
 
@@ -146,15 +205,13 @@ form {
         padding: 1%;
         background-color: $color1;
         border-radius: 10px;
-        border: 1px solid;
+        border: none;
         color: $textColor;
     }
 
     textarea {
         padding: 3% 5% 0%;
         margin-bottom: 3%;
-
-
     }
 
     button {
@@ -168,24 +225,8 @@ form {
     }
 }
 
-h1 {
-    padding-top: 1em;
-    font-size: 2em;
-}
-
-section {
-    padding-bottom: 8%;
-}
-
-body {
-    letter-spacing: 0.1em;
-    background: $color2;
-    font-family: system-ui, -apple-system, Helvetica, arial, sans-serif;
-    color: $textColor
-}
-
 footer {
-
+    bottom: 0;
     margin-top: 10em;
     background: $color1;
     width: 100%;
@@ -208,37 +249,5 @@ footer {
 
             }
         }
-    }
-}
-
-@media(max-width: 768px) {
-
-    .box-jogos {
-        flex-direction: column;
-
-    }
-
-    .box {
-        width: 70%;
-        margin: 7%;
-    }
-
-    .nav-list {
-        position: absolute;
-        top: 6em;
-        width: 100%;
-        height: 4em;
-        background: $color1;
-        flex-direction: row;
-        justify-content: space-evenly;
-        align-items: center;
-        border-radius: 0 0.5em;
-    }
-    .form{
-        width: 100%;
-        margin-left: 0;
-    }
-    main{
-        padding-top:4em;
     }
 }

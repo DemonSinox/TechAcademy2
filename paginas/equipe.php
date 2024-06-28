@@ -1,48 +1,33 @@
-<section></section>
-<section class="box-jogos"data-aos="fade-up"
-data-aos-anchor-placement="top-bottom">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    <!-- box - 1 -->
-    <a href="https://github.com/DemonSinox" target="_blank" class="box">
+<?php
+$url = "https://techpl4y.000webhostapp.com/api/equipe.php";
 
-        <img src="imagens/Equipe/DemonSinox.jpeg">
+$dadosApi = file_get_contents($url);
+$dados = json_decode($dadosApi);
 
-        <h2> DemonSinox </h2>
+?>
 
-        <p> Dev. TechPlay & ReaperGoblin </p>
+<h1 class="text-center">Equipe de Desenvolvimento</h1>
 
-    </a>
 
-    <!-- box - 2 -->
-    <a href="" class="box">
-
-        <img src="imagens/Equipe/Lucas De Fiori Viudes.jpeg">
-
-        <h2> Lucas De Fiori </h2>
-
-        <p> Função </p>
-
-    </a>
-
-    <!-- box - 3 -->
-    <a href="" class="box">
-
-        <img src="imagens/Equipe/Miguel Pompilio De Camargo.jpeg">
-
-        <h2> Miguel Pompilio </h2>
-
-        <p> Dev. John Lennon </p>
-
-    </a>
-
-    <!-- box - 4 -->
-    <a href="" class="box">
-
-        <img src="imagens/Equipe/Jamil Jose Daiko Junior.jpeg">
-
-        <h2> Jamil Jose </h2>
-
-        <p> Dev. Monster Hunter </p>
-
-    </a>
-</section>
+<div class="row" data-aos="fade-down">
+        <?php
+            foreach($dados as $equipe) {
+                ?>
+                <div class="col-12 col-md-4">
+                    <div class="card" data-aos="fade-right">
+                        <a style="text-decoration: none; "href="<?=$equipe->portifolio?>" target="_blank">
+                        <img width="100%" height="350vh" src="<?=$equipe->foto?>"
+                        alt="<?=$equipe->nome?>" class="card-img-top">
+                        <div class="card-text text-center">
+                            <p><strong><?=$equipe->nome?></strong></p>
+                            <p class="card-text">DeV.<?=$equipe->cargo?></p>
+                        </a>
+                        </div>
+                    </div>
+                </div>
+                <?php
+            }
+        ?>
+</div>
